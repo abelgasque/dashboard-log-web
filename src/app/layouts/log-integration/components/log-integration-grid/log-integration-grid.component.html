@@ -1,0 +1,28 @@
+<!-- <p-table [value]="this.listLogIntegration" [responsive]="true" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50,100]"  appendTo="body">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 10pc;text-align: center;">Código</th>
+            <th style="text-align: center;">Aplicação</th>
+            <th style="width: 25pc;text-align: center;">Método</th>            
+            <th style="width: 13pc;text-align: center;">Data criação</th>
+            <th style="width: 8pc;text-align: center;">Situação</th>   
+            <th style="width: 8pc;text-align: center;">Versão</th> 
+            <th style="width: 8pc;text-align: center;">Opções</th>   
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData>
+        <tr>
+            <td style="text-align: center;">{{rowData.idLogIntegration}}</td>
+            <td style="text-align: center;">{{rowData.nmLogIntegrationType}}</td>
+            <td style="text-align: center;">{{rowData.deMethod}}</td>            
+            <td style="text-align: center;">{{this.coreService.formatDatePtBr(rowData.dtCreation)}}</td>
+            <td style="text-align: center;" [style.color]="(rowData.isSuccess) ? 'green' : 'red'">
+                {{(rowData.isSuccess) ? 'OK' : 'ERROR'}}
+            </td>    
+            <td style="text-align: center;">{{rowData.nuVersion}}</td>   
+            <td style="text-align: center;">
+                <p-button icon="pi pi-info" (click)="this.dialogLogIntegration=true" styleClass="p-button-text"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>   -->

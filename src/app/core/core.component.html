@@ -1,0 +1,15 @@
+<app-navbar [hasBtnMenu]="true" [hasBtnUserAuth]="true"></app-navbar>
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="this.navbarService.openedSideBar">
+        <app-sidebar-default></app-sidebar-default>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>
+
+<app-spinner></app-spinner>
+<app-messages></app-messages>

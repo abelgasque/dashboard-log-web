@@ -1,0 +1,22 @@
+<mat-divider></mat-divider>
+<mat-nav-list>    
+    <h2 matSubheader>
+        <mat-icon>house</mat-icon>
+        Menu
+    </h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['']">        
+        Principal
+    </a>
+
+    <mat-divider></mat-divider>
+    <h2 matSubheader>
+        <mat-icon>dashboard</mat-icon>
+        Painel de Controle
+    </h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['dashboard', 'log-integration']">        
+        Integração
+    </a>
+
+</mat-nav-list>

@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <button mat-icon-button type="button" (click)="this.navbarService.toggleSideBar()" *ngIf="this.authService.hasUserAuth">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span class="icon-logo"> 
+            <button mat-flat-button type="button" class="button-icon-logo" [routerLink]="['']">            
+                <img src="./assets/img/Soon/SoonCode7_White.png">
+            </button>    
+        </span>
+
+        <span class="example-spacer"></span>
+
+        <button mat-button type="button"  (click)="loggout()" [hidden]="!this.authService.hasUserAuth" *ngIf="this.hasBtnUserAuth">
+            <mat-icon>exit_to_app</mat-icon>
+            Loggout
+        </button>
+
+        <button mat-button type="button" [routerLink]="['/security','auth']" [hidden]="this.authService.hasUserAuth" *ngIf="this.hasBtnUserAuth">
+            <mat-icon>login</mat-icon>
+            Login
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>

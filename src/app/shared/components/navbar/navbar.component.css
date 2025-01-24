@@ -1,0 +1,24 @@
+.mat-toolbar {
+    background-color: #050447;
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+ul li {
+    list-style: none;
+}
+
+.icon-logo{
+    padding-left: 10px;
+}
+
+.button-icon-logo{
+    background-color: transparent !important;
+}
+
+.button-icon-logo img{
+    max-width: 80px;
+}

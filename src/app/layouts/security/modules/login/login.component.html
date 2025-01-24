@@ -1,0 +1,37 @@
+<form class="row" #f="ngForm" autocomplete="off" (ngSubmit)="login(f)" fxLayout="row" fxLayoutAlign="center center">                                
+    <div class="col-12">
+        <h3 class="header-login">Autenticar no sistema</h3>
+    </div>    
+
+    <div class="col-12 space-input p-fluid">
+        <span class="p-float-label">
+            <input type="text" name="userName" [(ngModel)]="entity.userName" maxlength="500" pInputText /> 
+            <label>Login *</label>
+        </span>
+    </div>
+
+    <div class="col-12 space-input p-fluid">
+        <span class="p-float-label">
+            <p-password type="text" name="password" [(ngModel)]="entity.password" [toggleMask]="true" [feedback]="false" maxlength="50"></p-password> 
+            <label>Senha *</label>
+        </span>
+    </div>
+    
+    <div class="col-12" style="text-align: center;">
+        <button mat-stroked-button type="submit">
+            <mat-icon>login</mat-icon>
+            Login
+        </button>
+    </div>
+
+    <!-- <div class="col-12" style="text-align: center;">
+        <a href="#" routerLinkActive="list-item-active" [routerLink]="['/code7-crypto']">
+            Cadastrar-se
+        </a>
+
+        <a href="#" routerLinkActive="list-item-active" [routerLink]="['/code7-crypto']">
+            Recuperar senha
+        </a>
+    </div> -->
+
+</form>
