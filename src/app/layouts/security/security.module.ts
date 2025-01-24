@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
-import { JwtModule } from "@auth0/angular-jwt";
+// import { JwtModule } from "@auth0/angular-jwt";
 
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
@@ -49,13 +49,13 @@ export function tokenGetter() {
     InputTextModule,
     PasswordModule,
     
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        allowedDomains: environment.tokenWhitelistedDomains,
-        disallowedRoutes: environment.tokenBlacklistedRoutes
-      }
-    }),
+    // JwtModule.forRoot({
+    //   config: {
+    //     tokenGetter: tokenGetter,
+    //     allowedDomains: environment.tokenWhitelistedDomains,
+    //     disallowedRoutes: environment.tokenBlacklistedRoutes
+    //   }
+    // }),
   ],
   providers:[
     SecurityService,

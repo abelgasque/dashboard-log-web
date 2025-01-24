@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { JwtHelperService } from "@auth0/angular-jwt";
+//import { JwtHelperService } from "@auth0/angular-jwt";
 
 import { User } from 'src/app/core/util/model';
 
@@ -11,9 +11,9 @@ export class AuthService {
 
   public hasUserAuth: boolean = true;
 
-  constructor(private jwtHelperService: JwtHelperService) { 
-    this.validateUserSession();
-  }
+  // constructor(private jwtHelperService: JwtHelperService) { 
+  //   this.validateUserSession();
+  // }
 
   private validateUserSession(){
     if((this.getToken() != null)){            
@@ -40,14 +40,14 @@ export class AuthService {
   }
 
   public decodeToken(pToken: string){
-    return this.jwtHelperService.decodeToken(pToken);
+    //return this.jwtHelperService.decodeToken(pToken);
   }
 
   public getTokenExpirationDate(pToken: string){ 
-    return this.jwtHelperService.getTokenExpirationDate(pToken);
+    //return this.jwtHelperService.getTokenExpirationDate(pToken);
   }
 
   public isTokenExpired(pToken: string){ 
-    return this.jwtHelperService.isTokenExpired(pToken);
+    //return this.jwtHelperService.isTokenExpired(pToken);
   }
 }
