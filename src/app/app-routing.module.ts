@@ -38,7 +38,10 @@ const routes: Routes = [
       {
         path: 'dashboard', component: DashboardComponent,
         children: [
-          { path: 'log-integration', component: DashboardLogIntegrationComponent, canActivate: [AuthGuard] },
+          { 
+            path: 'log', 
+            component: DashboardLogIntegrationComponent
+          },
         ]
       },
 
