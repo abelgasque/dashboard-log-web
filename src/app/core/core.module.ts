@@ -10,7 +10,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
-import { AuthGuard } from 'src/app/core/auth/auth.guard';
+//import { AuthGuard } from 'src/app/core/auth/auth.guard';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DefaultModule } from 'src/app/layouts/default/default.module';
@@ -44,7 +44,7 @@ import { CoreComponent } from 'src/app/core/core.component';
     LogIntegrationModule,
   ],
   providers:[
-    AuthGuard,
+    //AuthGuard,
     AuthService,
     ErrorHandlerService,
     NavbarService
