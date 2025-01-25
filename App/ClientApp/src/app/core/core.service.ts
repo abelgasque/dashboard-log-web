@@ -16,6 +16,6 @@ export class CoreService {
   }
 
   public getBaseUrl() {
-    return (environment.useUrlProd) ? environment.baseUrlProd : environment.baseUrlDev;
+    return environment.baseUrl;
   }
 }

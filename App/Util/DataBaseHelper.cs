@@ -23,10 +23,16 @@ namespace App.Util
         public string GetConnectionStringSql()
         {
             return string.Format(_dbSettings.ConnectionString, 
-                                    CryptoHelper.Decrypt(_dbSettings.Server), 
-                                    CryptoHelper.Decrypt(_dbSettings.Database), 
-                                    CryptoHelper.Decrypt(_dbSettings.UserId), 
-                                    CryptoHelper.Decrypt(_dbSettings.PasswordDb));
+                                    _dbSettings.Server, 
+                                    _dbSettings.Database, 
+                                    _dbSettings.UserId, 
+                                    _dbSettings.PasswordDb);
+
+            // return string.Format(_dbSettings.ConnectionString, 
+            //                         CryptoHelper.Decrypt(_dbSettings.Server), 
+            //                         CryptoHelper.Decrypt(_dbSettings.Database), 
+            //                         CryptoHelper.Decrypt(_dbSettings.UserId), 
+            //                         CryptoHelper.Decrypt(_dbSettings.PasswordDb));
         }
 
         public string GetAuthenticateUser(UserWs pUser)
